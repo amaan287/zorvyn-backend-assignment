@@ -1,7 +1,6 @@
 package constants
 
 import (
-	"errors"
 	"fmt"
 	"net/url"
 	"strconv"
@@ -76,7 +75,7 @@ func GetEnv() (EnvConstants, error) {
 		}
 
 		if envConstants.HOST == "" || envConstants.DBUser == "" || envConstants.DBPassword == "" {
-			configErr = errors.New("Missing required database configuration")
+			configErr = ErrMissingENV
 		}
 	})
 

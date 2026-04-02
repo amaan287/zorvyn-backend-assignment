@@ -13,7 +13,7 @@ func main() {
 	if err != nil {
 		log.Panic(err)
 	}
-	fmt.Printf("server is running on http:localhost%s", env.PORT)
+	fmt.Printf("server is running on http://localhost%s", env.PORT)
 	if err = http.ListenAndServe(env.PORT, nil); err != nil {
 		log.Panic(err)
 	}
